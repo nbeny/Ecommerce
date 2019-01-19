@@ -8,7 +8,7 @@
 
 Built with my handlike a god war :D
 
-4 produits a vendre !
+4 produits a vendre ! LOLILOL
 
 All fully responsive. All compatible with different browsers.
 
