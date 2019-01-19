@@ -2,7 +2,7 @@
 
 # React Bootstrap with Material Design
 
-[![npm version](status)](ok)
+[![whut](status)](ok)
 
 Built with my handlike a god war :D
 
