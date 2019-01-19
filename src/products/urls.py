@@ -22,7 +22,8 @@ from .views import (
     ProductDetailView,
     product_detail_view,
     ProductFeaturedListView,
-    ProductFeaturedDetailView
+    ProductFeaturedDetailView,
+    ProductDetailSlugView
 )
 
 urlpatterns = [
@@ -34,4 +35,6 @@ urlpatterns = [
 
     path('featured/', ProductFeaturedListView.as_view()),
     re_path(r'featured/(?P<pk>\d+)/$', ProductFeaturedDetailView.as_view()),
+
+    re_path(r'products/(?P<slug>[\w-]+)/$', ProductDetailSlugView),
 ]
