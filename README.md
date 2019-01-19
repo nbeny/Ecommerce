@@ -2,8 +2,6 @@
 
 # Ecommerce
 
-# React Bootstrap with Material Design
-
 [![buddle]()]()
 
 Built with my handlike a god war :D
