@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a27fd64-028d-4e06-8495-ed65b517d4ad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/products/templates/products/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/templates/products/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/products/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ecommerce/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/src/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/products/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/requirements-dev.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/requirements-dev.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/src/products/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="e#0#6#0" expanded="true" />
               </folding>
@@ -43,23 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/products/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="510">
+              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#4#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/products/templates/products/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -131,10 +121,10 @@
         <option value="$PROJECT_DIR$/src/Ecommerce/urls.py" />
         <option value="$PROJECT_DIR$/src/products/templates/products/list.html" />
         <option value="$PROJECT_DIR$/src/products/urls.py" />
-        <option value="$PROJECT_DIR$/src/products/views.py" />
         <option value="$PROJECT_DIR$/src/products/models.py" />
         <option value="$PROJECT_DIR$/src/requirements-dev.txt" />
         <option value="$PROJECT_DIR$/src/products/templates/products/detail.html" />
+        <option value="$PROJECT_DIR$/src/products/views.py" />
       </list>
     </option>
   </component>
@@ -272,12 +262,12 @@
       <workItem from="1547692203443" duration="3575000" />
       <workItem from="1547796730806" duration="11554000" />
       <workItem from="1547811981776" duration="3442000" />
-      <workItem from="1547856300894" duration="9641000" />
+      <workItem from="1547856300894" duration="10767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28212000" />
+    <option name="totallyTimeSpent" value="29338000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1485" height="1080" extended-state="6" />
@@ -455,16 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/products/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/requirements-dev.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -475,7 +455,7 @@
     <entry file="file://$PROJECT_DIR$/src/products/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="e#0#6#0" expanded="true" />
           </folding>
@@ -485,7 +465,17 @@
     <entry file="file://$PROJECT_DIR$/src/products/templates/products/detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/products/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#4#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
