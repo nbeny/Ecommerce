@@ -1,8 +1,10 @@
+[![cover]()]()
+
 # Ecommerce
 
 # React Bootstrap with Material Design
 
-[![whut](status)](ok)
+[![buddle]()]()
 
 Built with my handlike a god war :D
 
@@ -18,9 +20,9 @@ All fully responsive. All compatible with different browsers.
 
 # Live Preview
 
-[![Home]()
-[![Login]()
-[![Register]()
+[![home]()
+[![login]()
+[![register]()
 
 # Version:
 
