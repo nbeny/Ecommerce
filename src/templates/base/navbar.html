@@ -34,14 +34,14 @@
                 </li>
                 {% if request.user.is_authenticated %}
                     <li class="nav-item {% if request.path == logout_url %}active{% endif %}">
-                        <a class="nav-link" href="{{ products_url }}">Logout</a>
+                        <a class="nav-link" href="{{ logout_url }}">Logout</a>
                     </li>
                 {% else %}
                     <li class="nav-item {% if request.path == login_url %}active{% endif %}">
-                        <a class="nav-link" href="{{ products_url }}">Login</a>
+                        <a class="nav-link" href="{{ login_url }}">Login</a>
                     </li>
                     <li class="nav-item {% if request.path == register_url %}active{% endif %}">
-                        <a class="nav-link" href="{{ products_url }}">Register</a>
+                        <a class="nav-link" href="{{ register_url }}">Register</a>
                     </li>
                 {% endif %}
                 <li class="nav-item dropdown">

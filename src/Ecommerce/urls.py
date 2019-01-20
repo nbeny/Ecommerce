@@ -33,6 +33,7 @@ urlpatterns = [
     path('logout/', logout_page, name='logout'),
 
     path('products/', include('products.urls', namespace='products')),
+    path('search/', include('search.urls', namespace='search')),
 
     path('bootstrap/', TemplateView.as_view(template_name='bootstrap/example.html')),
 ]
