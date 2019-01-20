@@ -15,13 +15,13 @@ class SearchProductView(ListView):
 
     def get_queryset(self, *args, **kwargs):
         request = self.request
-        print(request.GET)
+        # print(request.GET)
         method_dict = request.GET
         # query = request.GET.get('q')
         query = method_dict.get('q', None)
-        print(query)
+        # print(query)
         if query is not None:
-            return Product.objects.filter(title__icontains=query)
+            return Product.objects.search(query)
         return Product.objects.featured()
         '''
             __icontains = fields contains this
