@@ -20,6 +20,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 
+from carts.views import cart_home
+
 from .views import home_page, about_page, contact_page, login_page, register_page, logout_page
 
 urlpatterns = [
@@ -36,6 +38,8 @@ urlpatterns = [
     path('search/', include('search.urls', namespace='search')),
 
     path('bootstrap/', TemplateView.as_view(template_name='bootstrap/example.html')),
+
+    path('cart/', cart_home, name='cart'),
 ]
 
 if settings.DEBUG:
