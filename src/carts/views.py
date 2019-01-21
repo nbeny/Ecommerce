@@ -2,6 +2,12 @@ from django.shortcuts import render
 
 
 def cart_home(request):
-    print(request.session) # on the request
-    print(dir(request.session))
+    # print(request.session) # on the request
+    # print(dir(request.session))
+    # request.session.set_expiry(300) # 5 minutes
+    # key = request.session.session_key
+    # print(key)
+    # 'session_key', 'set_expiry'
+    request.session['cart_id'] = 12 # setter
+    request.session['user'] = request.user.username
     return render(request, 'carts/home.html', {})

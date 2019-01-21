@@ -6,11 +6,14 @@ from .forms import ContactForm, LoginFrom, RegisterForm
 
 
 def home_page(request):
+    # print(request.session.get("first_name", "Unknown")) # getter
+    # request.session['first_name']
     context = {
         "title":"Hello World!",
         "content":"Welcome to the home page.",
-        "premium_content":"YEAHHHH, your authenticated :D"
     }
+    if request.user.is_authenticated:
+       context['premium_content'] = 'YEAHHHH, your authenticated :D'
     return render(request, "home_page.html", context)
 
 
