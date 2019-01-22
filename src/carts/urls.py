@@ -31,35 +31,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf import settings
-from django.conf.urls.static import static
 
-from django.contrib import admin
-from django.urls import path, include
-from django.views.generic import TemplateView
+from django.urls import path, re_path
 
-from carts.views import cart_home
+from .views import (
+    cart_home,
+    cart_update,
+)
 
-from .views import home_page, about_page, contact_page, login_page, register_page, logout_page
+app_name = 'cart'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
-    path('', home_page, name='home'),
-    path('about/', about_page, name='about'),
-    path('contact/', contact_page, name='contact'),
-    path('login/', login_page, name='login'),
-    path('register/', register_page, name='register'),
-    path('logout/', logout_page, name='logout'),
-
-    path('products/', include('products.urls', namespace='products')),
-    path('search/', include('search.urls', namespace='search')),
-    path('cart/', include('carts.urls', namespace='cart')),
-
-    path('bootstrap/', TemplateView.as_view(template_name='bootstrap/example.html')),
-
+    path('', cart_home, name='home'),
+    path('update/', cart_update, name='update'),
 ]
-
-if settings.DEBUG:
-    urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
