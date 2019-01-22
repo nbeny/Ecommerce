@@ -16,17 +16,23 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
+from products.models import Product
 from .models import Cart
 
 
 def cart_home(request):
     cart_obj, new_obj = Cart.objects.new_or_get(request)
-    # products = Cart_obj.products.all()
-    # total = 0
-    # for x in products:
-    #     total += x.price
-    # print(total)
-    # cart_obj.total = total
+    products = Cart_obj.products.all()
+    total = 0
+    for x in products:
+        total += x.price
+    print(total)
+    cart_obj.total = total
+    cart_obj.save()
     return render(request, 'carts/home.html', {})
+
+def cart_update(request):
+    obj = Product.objects.get(id=1)
+    return
