@@ -109,6 +109,10 @@ class Product(models.Model):  # ProductCategory
     def __unicode__(self):
         return self.title
 
+    @property
+    def name(self):
+        return self.title
+
 
 def product_pre_save_receiver(sender, instance, *args, **kwargs):
     if not instance.slug:

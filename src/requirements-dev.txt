@@ -1,4 +1,4 @@
 django
 Pillow
 
-flaske8
+flake8
