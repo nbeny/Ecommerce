@@ -24,14 +24,7 @@ from .models import Cart
 
 def cart_home(request):
     cart_obj, new_obj = Cart.objects.new_or_get(request)
-    products = cart_obj.products.all()
-    total = 0
-    for x in products:
-        total += x.price
-    print(total)
-    cart_obj.total = total
-    cart_obj.save()
-    return render(request, 'carts/home.html', {})
+    return render(request, 'carts/home.html', {'cart': cart_obj})
 
 def cart_update(request):
     print(request.POST)
@@ -47,6 +40,7 @@ def cart_update(request):
             cart_obj.products.remove(product_obj)
         else:
             cart_obj.products.add(product_obj) # cart_obj.products.add(1)
+        request.session['cart_items'] = cart_obj.products.count()
     # cart_obj.products.remove(obj)
     # return redirect(product_obj.get_absolute_url())
     return redirect('cart:home')
