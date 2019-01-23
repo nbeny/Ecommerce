@@ -24,11 +24,11 @@ from django.db.models.signals import pre_save, post_save
 from django.urls import reverse
 from django.db.models import Q
 
-from .utils import unique_slug_generator
+from Ecommerce.utils import unique_slug_generator
 
 
-def get_filename_ext(filename):
-    base_name = os.path.basename(filename)
+def get_filename_ext(filepath):
+    base_name = os.path.basename(filepath)
     name, ext = os.path.splitext(base_name)
     return name, ext
 
