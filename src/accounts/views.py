@@ -19,6 +19,7 @@
 from django.contrib.auth import authenticate, login, logout, get_user_model
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.utils.http import is_safe_url
 
 from .forms import LoginFrom, RegisterForm
 
@@ -28,8 +29,11 @@ def login_page(request):
     context = {
         'form': login_form,
     }
-    print('User logged in')
+    # print('User logged in')
     # print(request.user.is_authenticated())
+    next_ = request.GET.get('next')
+    next_post = request.POST.get('next')
+    redirect_path = next_ or next_post or None
     if login_form.is_valid():
         print(login_form.cleaned_data)
         username = login_form.cleaned_data.get('username')
@@ -40,8 +44,11 @@ def login_page(request):
             # print(request.user.is_authenticated())
             # A backend authenticated the credentials
             login(request, user)
+            if is_safe_url(redirect_path, request.get_host()):
+                return redirect(redirect_path)
             # context['form'] = login_form()
-            return redirect('/')
+            else:
+                return redirect('/')
         else:
             # No backend authenticated the credentials
             print('Error')
@@ -65,7 +72,7 @@ def register_page(request):
     return render(request, 'accounts/register.html', context)
 
 
-def logout_page(request):
-    logout(request)
-    # Redirect to a success page.
-    return redirect('/')
+# def logout_page(request):
+#     logout(request)
+#     # Redirect to a success page.
+#     return redirect('/')
