@@ -75,6 +75,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 ROOT_URLCONF = 'Ecommerce.urls'
 
 TEMPLATES = [

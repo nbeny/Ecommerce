@@ -17,8 +17,9 @@
 """
 
 from django.urls import path, include
+from django.contrib.auth.views import LogoutView
 
-from .views import login_page, register_page, logout_page
+from .views import login_page, register_page
 
 
 app_name = 'accounts'
@@ -27,5 +28,5 @@ app_name = 'accounts'
 urlpatterns = [
     path('login/', login_page, name='login'),
     path('register/', register_page, name='register'),
-    path('logout/', logout_page, name='logout'),
+    path('logout/', LogoutView.as_view(), name='logout'),
 ]

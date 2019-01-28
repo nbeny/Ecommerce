@@ -38,6 +38,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 
+
 # from carts.views import cart_home
 
 from .views import home_page, about_page, contact_page
