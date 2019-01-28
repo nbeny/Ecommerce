@@ -26,6 +26,7 @@ from products.models import Product
 
 User = settings.AUTH_USER_MODEL
 
+
 class CartManager(models.Manager):
     def new_or_get(self, request):
         cart_id = request.session.get('cart_id', None)
@@ -63,7 +64,7 @@ class Cart(models.Model):
 
     def __str__(self):
         return str(self.id)
-    
+
 
 def m2m_changed_cart_receiver(sender, instance, action, *args, **kwargs):
     if action == 'post_add' or action == 'post_remove' or action == 'post_clear':
@@ -84,5 +85,6 @@ def pre_save_cart_receiver(sender, instance, *args, **kwargs):
         instance.total = Decimal(instance.subtotal) * Decimal(1.08) # 8% tax
     else:
         instance.total = 0.00
+
 
 pre_save.connect(pre_save_cart_receiver, sender=Cart)
