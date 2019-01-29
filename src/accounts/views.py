@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-from django.contrib.auth import authenticate, login, logout, get_user_model
+from django.contrib.auth import authenticate, login, get_user_model
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.utils.http import is_safe_url
@@ -26,7 +26,7 @@ from .models import GuestEmail
 
 
 def guest_register_page(request):
-    login_form = LoginForm(request.POST or None)
+    login_form = GuestForm(request.POST or None)
     context = {
         'form': login_form,
     }
@@ -40,8 +40,8 @@ def guest_register_page(request):
         if is_safe_url(redirect_path, request.get_host()):
             return redirect(redirect_path)
         else:
-            return redirect('/register/')
-    return redirect('/register/')
+            return redirect('/cart/checkout/')
+    return redirect('/cart/checkout/')
 
 
 def login_page(request):
