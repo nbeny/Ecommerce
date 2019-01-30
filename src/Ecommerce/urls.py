@@ -54,6 +54,7 @@ urlpatterns = [
     # path('logout/', logout_page, name='logout'),
 
     path('accounts/', include('accounts.urls', namespace='accounts')),
+    path('address/', include('addresses.urls', namespace='addresses')),
     path('products/', include('products.urls', namespace='products')),
     path('search/', include('search.urls', namespace='search')),
     path('cart/', include('carts.urls', namespace='cart')),
