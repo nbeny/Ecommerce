@@ -1,6 +1,6 @@
 [![cover]()]()
 
-# Ecommerce
+# eCommerce
 
 [![buddle]()]()
 
@@ -31,7 +31,7 @@ All fully responsive. All compatible with different browsers.
 - Clone following repo:
 
 ```javascript
-git clone https://github.com/nbeny/Ecommerce .
+git clone https://github.com/nbeny/eCommerce .
 ```
 
 note "." at the end. It will clone files directly into current folder.
