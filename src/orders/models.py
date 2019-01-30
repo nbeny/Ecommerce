@@ -17,12 +17,13 @@
 """
 
 import math
+
 from django.db import models
-from django.db.models.signals import pre_save, post_save
-
-
+from addresses.models import Address
 from billing.models import BillingProfile
 from carts.models import Cart
+
+from django.db.models.signals import pre_save, post_save
 from Ecommerce.utils import unique_order_id_generator
 
 
@@ -49,17 +50,15 @@ class OrderManager(models.Manager):
 # Random, Unique
 class Order(models.Model):
     length = 120
-    # pk / id 345678765678
-    # billing_profile = ?
-    # shipping_address
-    # billing_address
-    billing_profile = models.ForeignKey(BillingProfile, null=True, blank=True, on_delete=models.CASCADE)
-    order_id        = models.CharField(max_length=length, blank=True) # AB23DE4
-    cart            = models.ForeignKey(Cart, on_delete=models.CASCADE)
-    status          = models.CharField(max_length=length, default='created', choices=ORDER_STATUS_CHOICES)
-    shipping_total  = models.DecimalField(default=5.99, max_digits=100, decimal_places=2)
-    total           = models.DecimalField(default=0.00, max_digits=100, decimal_places=2)
-    active          = models.BooleanField(default=True)
+    billing_profile     = models.ForeignKey(BillingProfile, null=True, blank=True, on_delete=models.CASCADE)
+    order_id            = models.CharField(max_length=length, blank=True) # AB23DE4
+    shipping_address    = models.ForeignKey(Address, null=True, blank=True, related_name='shipping_address', on_delete=models.CASCADE)
+    billing_address     = models.ForeignKey(Address, null=True, blank=True, related_name='billing_address', on_delete=models.CASCADE)
+    cart                = models.ForeignKey(Cart, on_delete=models.CASCADE)
+    status              = models.CharField(max_length=length, default='created', choices=ORDER_STATUS_CHOICES)
+    shipping_total      = models.DecimalField(default=5.99, max_digits=100, decimal_places=2)
+    total               = models.DecimalField(default=0.00, max_digits=100, decimal_places=2)
+    active              = models.BooleanField(default=True)
 
     def __str__(self):
         return self.order_id
