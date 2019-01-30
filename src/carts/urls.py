@@ -1,7 +1,7 @@
 # coding=utf-8
 
 """
-    Ecommerce - A Python Dating Website
+    eCommerce - A Python Dating Website
     Copyright (C) 2018-2019 nbeny
     <nbeny@student.42.fr>
     This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,8 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-"""Ecommerce URL Configuration
+"""
+Ecommerce URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/

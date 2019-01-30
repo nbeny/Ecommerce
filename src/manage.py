@@ -1,7 +1,7 @@
 # coding=utf-8
 
 """
-    Ecommerce - A Python Dating Website
+    eCommerce - A Python Dating Website
     Copyright (C) 2018-2019 nbeny
     <nbeny@student.42.fr>
     This program is free software: you can redistribute it and/or modify
@@ -15,6 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
+
 #!/usr/bin/env python
 
 
